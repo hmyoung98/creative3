@@ -3,21 +3,21 @@
   <div id="menu">
     <div id="brand">
       <router-link to="/">
-        <img src="/images/car-logo.png">
+        <img src="images/car-logo.png">
       </router-link>
     </div>
     <div id="side">
       <router-link to="/browse">
         <div class="menu-item browse">
-          <img src="/images/globe.jpg">
+          <img src="images/globe.jpg">
           <p>Browse by Model</p>
         </div>
       </router-link>
       <router-link to="/garage">
         <div class="menu-item">
-          <img src="/images/car-silh.png">
+          <img src="images/car-silh.png">
           <p>Garage</p>
-          <p> 0 Cars</p>
+          <p>{{this.$root.$data.garageSize}} Cars</p>
         </div>
       </router-link>
     </div>
