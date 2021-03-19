@@ -21,19 +21,18 @@ export default {
   },
   data() {
     return {
-      car-model: '',
+      model: '',
     }
   },
   computed: {
     products() {
-      return this.$root.$data.cars.filter(car => car.car-model === this.car-model);
+      return this.$root.$data.cars.filter(car => car.model === this.model);
     }
   },
   methods: {
-    select(car-model) {
-      this.car-model = car-model;
+    select(model) {
+      this.model = model;
     }
   }
 }
 </script>
-© 2021 GitHub, Inc.
