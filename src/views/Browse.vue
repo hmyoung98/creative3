@@ -8,7 +8,7 @@
       <li class="pure-menu-item"><a @click="select('Brazil')" href="#" class="pure-menu-link">Brazil</a></li>
     </ul>
   </div>
-  <ProductList :products="products" />
+  <CarList :cars="cars" />
 </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
     }
   },
   computed: {
-    products() {
+    cars() {
       return this.$root.$data.cars.filter(car => car.model === this.model);
     }
   },
