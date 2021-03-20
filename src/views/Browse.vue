@@ -2,10 +2,11 @@
 <div>
   <div class="pure-menu pure-menu-horizontal">
     <ul class="pure-menu-list">
-      <li class="pure-menu-item"><a @click="select('United States')" href="#" class="pure-menu-link">United States</a></li>
-      <li class="pure-menu-item"><a @click="select('Canada')" href="#" class="pure-menu-link">Canada</a></li>
-      <li class="pure-menu-item"><a @click="select('Mexico')" href="#" class="pure-menu-link">Mexico</a></li>
-      <li class="pure-menu-item"><a @click="select('Brazil')" href="#" class="pure-menu-link">Brazil</a></li>
+      <li class="pure-menu-item"><a @click="select('1960-1980')" href="#" class="pure-menu-link">-1980</a></li>
+      <li class="pure-menu-item"><a @click="select('1980-1990')" href="#" class="pure-menu-link">1980-1990</a></li>
+      <li class="pure-menu-item"><a @click="select('1990-2010')" href="#" class="pure-menu-link">1990-2000</a></li>
+      <li class="pure-menu-item"><a @click="select('2000-2010')" href="#" class="pure-menu-link">2000-2010</a></li>
+      <li class="pure-menu-item"><a @click="select('2010-present')" href="#" class="pure-menu-link">2010-present</a></li>
     </ul>
   </div>
   <CarList :cars="cars" />
@@ -21,17 +22,17 @@ export default {
   },
   data() {
     return {
-      model: '',
+      year: '',
     }
   },
   computed: {
     cars() {
-      return this.$root.$data.cars.filter(car => car.model === this.model);
+      return this.$root.$data.cars.filter(car => car.year === this.year);
     }
   },
   methods: {
-    select(model) {
-      this.model = model;
+    select(year) {
+      this.year = year;
     }
   }
 }

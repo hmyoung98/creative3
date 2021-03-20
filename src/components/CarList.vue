@@ -5,12 +5,13 @@
       <div class="info">
         <h1>{{car.make}}</h1>
 	<h2>{{car.model}}</h2>
-	<p><em>{{car.year}}</em></p>
-	<p>Color: {{car.color}}</p>
+	<p><em>{{car.year}}</em></p>	
       </div>
       <div class="image">
+        <img :src="'/images/car-pics/'+car.image">
       </div>
-      <div class="garage">
+      <div class="price">
+        <h2>{{car.price}}</h2>
         <button class="auto" v-on:click="addToGarage(car)">Add to Garage</button>
       </div>
     </div>
