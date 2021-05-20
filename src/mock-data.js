@@ -212,7 +212,7 @@ let mock = [{
 	"model":"Coupe",
 	"year":2006,
 	"price":"$31000",
-	"image":'car-pic-27'
+	"image":'car-pic-27',
 	"vin":"1LNHL9DK4EG886327"
 },
 {

@@ -22,7 +22,7 @@ export default {
   methods: {
     removeItem(item) {
       let index = this.$root.$data.garage.indexOf(item);
-      this.$root.$data.cart.splice(index, 1);
+      this.$root.$data.garage.splice(index, 1);
       this.$root.$data.garageSize -= 1;
     }
   },
